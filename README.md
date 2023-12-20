@@ -1,7 +1,10 @@
-# Creating a project to learn about API's and how to connect them to the front-end
+# A FullStack project to learn about JavaScript/Node.js with Express.js and React.js
 
-In the database folder, you will find a file named 'schema.sql', which contains the commands to configure PostgreSQL. I'm using a docker container with the database image, and if you wish to do the same, you can find a simple tutorial on how to set it up below:
-!!! Docker Desktop is necessary for the next steps !!!
+### Environment Variables
+I'm using the native support for dotenv from Node.js >= 20.6.0.
+In the root directory create a .env file like the .env.example available in this repo.
+
+!!! [Docker](https://www.docker.com/products/docker-desktop/) is necessary for the next steps !!!
 ### To set up the container
 CONTAINER_NAME(Pick one that is easy for you to identify).
 ```
