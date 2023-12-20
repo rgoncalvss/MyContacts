@@ -1,10 +1,10 @@
 # A FullStack project to learn about JavaScript/Node.js with Express.js and React.js
 
 ### Environment Variables
-I'm using the native support for dotenv from Node.js >= 20.6.0.
-In the root directory create a .env file like the .env.example available in this repo.
+I'm using the native support for dotenv from Node.js >= 20.6.0,
+in the root directory create a .env file like the .env.example available in this repo.
 
-!!! [Docker](https://www.docker.com/products/docker-desktop/) is necessary for the next steps !!!
+## !!! [Docker](https://www.docker.com/products/docker-desktop/) is necessary for the next steps !!!
 ### To set up the container
 CONTAINER_NAME(Pick one that is easy for you to identify).
 ```
