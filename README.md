@@ -4,7 +4,7 @@
 I'm using the native support for dotenv from Node.js >= 20.6.0,
 in the root directory create a .env file like the .env.example available in this repo.
 
-## !!! [Docker](https://www.docker.com/products/docker-desktop/) is necessary for the next steps !!!
+## :warning: [Docker](https://www.docker.com/products/docker-desktop/) is necessary for the next steps
 ### To set up the container
 CONTAINER_NAME(Pick one that is easy for you to identify).
 ```
