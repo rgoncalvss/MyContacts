@@ -2,7 +2,8 @@ const ContactRepository = require('../repositories/ContactRepository');
 
 class ContactController {
   async index(request, response) {
-    const contacts = await ContactRepository.findAll();
+    const { orderBy } = request.query;
+    const contacts = await ContactRepository.findAll(orderBy);
 
     response.json(contacts);
   }
@@ -12,11 +13,10 @@ class ContactController {
     const contact = await ContactRepository.findById(id);
 
     if (!contact) {
-      // 404 Not Found
       return response.status(404).json({ error: 'User not found' });
     }
 
-    response.json(contact);
+    return response.json(contact);
   }
 
   async store(request, response) {
@@ -37,7 +37,7 @@ class ContactController {
       name, email, phone, category_id,
     });
 
-    response.json(contact);
+    return response.json(contact);
   }
 
   async update(request, response) {
@@ -66,20 +66,15 @@ class ContactController {
       name, email, phone, category_id,
     });
 
-    response.json(contact);
+    return response.json(contact);
   }
 
   async delete(request, response) {
     const { id } = request.params;
-    const contact = await ContactRepository.findById(id);
-
-    if (!contact) {
-      // 404 Not Found
-      return response.status(404).json({ error: 'User not found' });
-    }
 
     await ContactRepository.delete(id);
-    response.sendStatus(204);
+
+    return response.sendStatus(204);
   }
 }
 
