@@ -12,5 +12,5 @@ app.use((error, request, response, next) => {
   response.sendStatus(500);
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server started at port ${port}`));
